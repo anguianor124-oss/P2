@@ -1,0 +1,62 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #34495e;
+    color: white;
+}
+
+.caja {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.caja h3 {
+    margin-bottom: 15px;
+}
+
+.temperaturas {
+    border-top: 4px solid #3498db;
+}
+
+.sueldos {
+    border-top: 4px solid #9b59b6;
+}
+
+.patron {
+    border-top: 4px solid #2ecc71;
+}
+
+.alumnos {
+    border-top: 4px solid #e67e22;
+}
+
+.agenda {
+    border-top: 4px solid #e84393;
+}
+
+.resultado {
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+button {
+    margin-bottom: 5px;
+}
+
+table {
+    width: 100%;
+}
+
+footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}

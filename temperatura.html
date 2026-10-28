@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Mis Ejercicios JavaScript</title>
+</head>
+<body>
+
+    <header class="container-fluid p-5 text-center">
+        <h1>Temperaturas y Ejercicios</h1>
+    </header>
+
+    <main class="container mt-5">
+        <div class="row">
+
+            <!-- EJERCICIO 1 -->
+            <div class="col-md-6">
+                <section class="caja temperaturas">
+                    <h3>Ejercicio 1: Temperaturas</h3>
+
+                    <button class="btn btn-warning" onclick="cargar()">
+                        Ingresa las 7 temperaturas
+                    </button>
+
+                    <button class="btn btn-success" onclick="mostrar()">
+                        Mostrar temperatura
+                    </button>
+
+                    <hr>
+
+                    <div id="imprimir">
+                        <div id="lista-temp"></div>
+                        <hr>
+                        <div>Promedio: <span id="promedio"></span></div>
+                        <div>Menor: <span id="menor"></span></div>
+                        <div>Mayor: <span id="mayor"></span></div>
+                        <div>Suma: <span id="sumaMM"></span></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 2 -->
+            <div class="col-md-6">
+                <section class="caja sueldos">
+                    <h3>Ejercicio 2: Calculo de Sueldos</h3>
+
+                    <button class="btn btn-warning" onclick="ejercicio2Sueldo()">
+                        Calcular sueldo
+                    </button>
+
+                    <hr>
+
+                    <div id="impSueldos" class="resultado"></div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 3 -->
+            <div class="col-md-6">
+                <section class="caja patron">
+                    <h3>Ejercicio 3: Patron del Numero 8</h3>
+
+                    <button class="btn btn-primary" onclick="generarBloques()">
+                        Generar bloques
+                    </button>
+
+                    <hr>
+
+                    <div id="impBloques" class="resultado"></div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 4 -->
+            <div class="col-md-6">
+                <section class="caja alumnos">
+                    <h3>Ejercicio 4: Alumnos</h3>
+
+                    <button class="btn btn-warning" onclick="capturarAlumnos()">
+                        Capturar alumnos
+                    </button>
+
+                    <button class="btn btn-danger" onclick="cortarAlumnos()">
+                        Eliminar posiciones
+                    </button>
+
+                    <button class="btn btn-success" onclick="vaciarAlumno()">
+                        Buscar y vaciar
+                    </button>
+
+                    <hr>
+
+                    <div id="impAlumnos" class="resultado"></div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 5 -->
+            <div class="col-12">
+                <section class="caja agenda">
+                    <h3>Ejercicio 5: Agenda Digital</h3>
+
+                    <button class="btn btn-warning" onclick="capturarAgenda()">
+                        Capturar eventos
+                    </button>
+
+                    <button class="btn btn-success" onclick="mostrarAgenda()">
+                        Mostrar agenda
+                    </button>
+
+                    <hr>
+
+                    <div id="impAgenda" class="resultado"></div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        Practicas de JavaScript
+    </footer>
+
+    <script src="temperatura.js"></script>
+
+</body>
+</html>
