@@ -1,74 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Arreglos con JS</title>
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Mis Ejercicios JavaScript</title>
 </head>
 <body>
-    <header class="container-fluid p-5 bg-primary text-white text-center">
-        <h1>Manejo de Arreglos</h1>
-        <p>LLenado, impresión, funciones de arreglos</p> 
+
+    <header class="container-fluid p-5 text-center">
+        <h1>Temperaturas y Ejercicios</h1>
     </header>
-    <section class="container mt-5">
+
+    <main class="container mt-5">
         <div class="row">
-          <article class="col-sm-4 auto-mx">
-            <h3>Definición de Arreglos</h3>
-            <article id="imprimir"></article>
-          </article>
-          <article class="col-sm-4">
-            <h3>Definición por índice </h3>
-            <article id="fecha">
-                <form action="#">
-                    <label>Selecione un número para día</label><input type="number" min="1" max="7" id="dia"><br>
-                    <label>Selecione un número para día</label><input type="number" min="1" max="12" id="m"><br>
-                    <button class="btn btn-warning" onclick="fechas()">Definir fecha</button>
-                </form>
-            </article>
-            <hr>
-            <p id="impdias"></p>
-            <p id="impmes"></p>
-          </article>
-          <article class="col-sm-4">
-            <h3>Llenado e impresión de un arreglo</h3>        
-            <button class="btn btn-warning" onclick="cargar()">Capturar 5 sueldos</button>
-            <button class="btn btn-success" onclick="mostrar()">Mostrar sueldos</button>
-            <hr>
-            <p id="sueldos"></p>
-          </article>
+
+            <!-- EJERCICIO 1 -->
+            <div class="col-md-6">
+                <section class="caja temperaturas">
+                    <h3>Ejercicio 1: Temperaturas</h3>
+
+                    <button class="btn btn-warning" onclick="cargar()">
+                        Ingresa las 7 temperaturas
+                    </button>
+
+                    <button class="btn btn-success" onclick="mostrar()">
+                        Mostrar temperatura
+                    </button>
+
+                    <hr>
+
+                    <div id="imprimir">
+                        <div id="lista-temp"></div>
+                        <hr>
+                        <div>Promedio: <span id="promedio"></span></div>
+                        <div>Menor: <span id="menor"></span></div>
+                        <div>Mayor: <span id="mayor"></span></div>
+                        <div>Suma: <span id="sumaMM"></span></div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 2 -->
+            <div class="col-md-6">
+                <section class="caja sueldos">
+                    <h3>Ejercicio 2: Calculo de Sueldos</h3>
+
+                    <button class="btn btn-warning" onclick="ejercicio2Sueldo()">
+                        Calcular sueldo
+                    </button>
+
+                    <hr>
+
+                    <div id="impSueldos" class="resultado"></div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 3 -->
+            <div class="col-md-6">
+                <section class="caja patron">
+                    <h3>Ejercicio 3: Patron del Numero 8</h3>
+
+                    <button class="btn btn-primary" onclick="generarBloques()">
+                        Generar bloques
+                    </button>
+
+                    <hr>
+
+                    <div id="impBloques" class="resultado"></div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 4 -->
+            <div class="col-md-6">
+                <section class="caja alumnos">
+                    <h3>Ejercicio 4: Alumnos</h3>
+
+                    <button class="btn btn-warning" onclick="capturarAlumnos()">
+                        Capturar alumnos
+                    </button>
+
+                    <button class="btn btn-danger" onclick="cortarAlumnos()">
+                        Eliminar posiciones
+                    </button>
+
+                    <button class="btn btn-success" onclick="vaciarAlumno()">
+                        Buscar y vaciar
+                    </button>
+
+                    <hr>
+
+                    <div id="impAlumnos" class="resultado"></div>
+                </section>
+            </div>
+
+            <!-- EJERCICIO 5 -->
+            <div class="col-12">
+                <section class="caja agenda">
+                    <h3>Ejercicio 5: Agenda Digital</h3>
+
+                    <button class="btn btn-warning" onclick="capturarAgenda()">
+                        Capturar eventos
+                    </button>
+
+                    <button class="btn btn-success" onclick="mostrarAgenda()">
+                        Mostrar agenda
+                    </button>
+
+                    <hr>
+
+                    <div id="impAgenda" class="resultado"></div>
+                </section>
+            </div>
+
         </div>
-    </section>
-    <section class="container mt-5 bg-primary">
-        <h2 class="text-center">Recorridos con ciclos diferentes</h2>
-        <article class="text-center">
-            <button class="btn btn-warning" onclick="recorridoForin()">For In</button>
-            <button class="btn btn-warning" onclick="imprimir()">For each</button>
-            <button class="btn btn-warning" onclick="cortar()">Cortar</button>
-            <button class="btn btn-warning" onclick="poner()">Poner</button>
-            <button class="btn btn-warning" onclick="quitar()">Quitar</button>
-            <button class="btn btn-warning" onclick="arreglo_random()">Random</button>
-            <hr>
-            <article>
-                <h3>Impresiones</h3>
-                <article id="impForin"></article>
-                <article id="impForeach"></article>
-                <article id="impCompleto"></article>
-                <article id="impCortado"></article>
-                <article id="impVerduras"></article>
-                <article id="impRandom"></article>
-            </article>
-        </article>
-   </section>
-   <section class="container mt-5 bg-info">
-        <article>
-            <h3>Arreglo Bidimensional</h3>
-            <button class="btn btn-success" onclick="bidimensional_definicion()">Arreglos Bidimensionales</button>
-            <article id="impBidimensional"></article>
-        </article>
-    </section>
-    <script src="js/arreglos.js"></script>
+    </main>
+
+    <footer>
+        Practicas de JavaScript
+    </footer>
+
+    <script src="temperatura.js"></script>
+
 </body>
 </html>
